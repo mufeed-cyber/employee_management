@@ -1,0 +1,37 @@
+# Employee Management API Documentation
+
+## Overview
+This document provides essential information about the Employee Management API, including setup instructions, endpoints, and usage examples.
+
+## Prerequisites
+- Python 3.x
+- Django
+- Django REST Framework
+- Database (e.g., SQLite, PostgreSQL)
+- djangorestframework-simplejwt
+
+
+
+The API will be available at `http://127.0.0.1:8000/`.
+
+## API Endpoints
+
+### Employee Endpoints
+| Method | Endpoint                | Description                             |
+|--------|-------------------------|-----------------------------------------|
+| GET    | `/api/employees/`       | List all employees                      |
+| POST   | `/api/employees/`       | Create a new employee                   |
+| GET    | `/api/employees/{id}/`  | Retrieve an employee by ID              |
+| PUT    | `/api/employees/{id}/`  | Update an existing employee             |
+| DELETE | `/api/employees/{id}/`  | Delete an employee by ID                |
+
+## Authentication
+- Include a token in the header for authenticated requests:
+
+POST /api/token/
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
